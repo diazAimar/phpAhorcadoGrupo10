@@ -3,10 +3,10 @@
 DIAZ AIMAR, FEDERICO; FAI-2859
 VIDAL, ADRIAN SANTIAGO; FAI-2758
 ******************************************/
-REPOSITORIOS: 
+/* REPOSITORIOS: 
 
 https://github.com/diazAimar/phpAhorcadoGrupo10
-https://github.com/Santiago-FAI/phpAhorcadoGrupo10
+https://github.com/Santiago-FAI/phpAhorcadoGrupo10 */
 
 
 /**
