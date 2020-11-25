@@ -146,8 +146,13 @@ function agregarPalabra($coleccionPalabras) {
         echo "Ingrese la pista: ";
         $pistaNueva = trim(fgets(STDIN));
         $coleccionPalabras[$n]["pista"] = $pistaNueva;
-        echo "Ingrese la cantidad de puntos que otorga la palabra '" . $palabraNueva . "': ";
-        $puntospalabraNueva = trim(fgets(STDIN));
+        do {
+            echo "Ingrese la cantidad de puntos que otorga la palabra '" . $palabraNueva . "': ";
+            $puntospalabraNueva = trim(fgets(STDIN));
+            if (!is_numeric($puntospalabraNueva)) {
+                echo "Incorrecto, debe ingresar un numero. \n";
+            }
+        } while (!is_numeric($puntospalabraNueva));
         $coleccionPalabras[$n]["puntosPalabra"] = $puntospalabraNueva;
     }
     return $coleccionPalabras;
