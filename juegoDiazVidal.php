@@ -158,7 +158,6 @@ function agregarPalabra($coleccionPalabras) {
 * Obtener indice aleatorio
 * Determina un numero aleatorio para la eleccion de la palabra.
 */
-
 function indiceAleatorioEntre($min,$max){
     $i = rand($min,$max);
     /*>>> documente qué hace la función rand según el manual php.net en internet <<<*/
@@ -193,7 +192,6 @@ function solicitarIndiceEntre($min,$max){
 * @param array $coleccionLetras
 * @return boolean
 */
-
 function palabraDescubierta($coleccionLetrasMod){
     $p=0;
     $descubierta=false;
@@ -234,7 +232,6 @@ function solicitarLetra(){
 * @param string $letra
 * @return array colección de letras modificada.
 */
-
 function destaparLetra($coleccionLetras, $letra){
     for ($i=0;$i<count($coleccionLetras);$i++){
         if($letra==$coleccionLetras[$i]["letra"]){
@@ -264,6 +261,10 @@ function stringLetrasDescubiertas($coleccionLetras,$letra){
     }
 }
 
+/**
+* Obtiene una expresión gráfica del estado del juego.
+* @param int $cantidadDeIntentos
+*/
 function imprimirAhorcado ($cantidadDeIntentos) {
     switch($cantidadDeIntentos) {
         case 6:
@@ -416,6 +417,12 @@ function mostrarJuego($coleccionJuegos,$coleccionPalabras,$indiceJuego){
     echo "\n";
 }
 
+/**
+* Determina el juego que supera un puntaje indicado por el usuario
+* @param int $puntaje
+* @param array $coleccionJuegos
+* @return int;
+*/
 function superaPuntajeIndicado($puntaje,$coleccionJuegos){
     $i = 0;
     $indice = -1;
@@ -428,6 +435,10 @@ function superaPuntajeIndicado($puntaje,$coleccionJuegos){
     return $indice;
 }
 
+/**
+* Muestra las palabras ordenadas por orden alfabético
+* @param array $coleccionPalabras
+*/
 function mostrarPalabrasOrdenadas($coleccionPalabras) {
     sort($coleccionPalabras);
     for ($i = 0; $i < count($coleccionPalabras) ; $i++) {
@@ -437,6 +448,11 @@ function mostrarPalabrasOrdenadas($coleccionPalabras) {
     }
 }
 
+/** 
+* Determina el indice del juego con mayor puntaje de la colección de juegos.
+* @param array $coleccionJuegos
+* @return int;
+*/
 function buscarIndiceMayorPuntaje($coleccionJuegos) {
     $mayorPuntaje = -1;
     $indice = -1;
